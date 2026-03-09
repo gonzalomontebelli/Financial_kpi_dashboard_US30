@@ -90,8 +90,7 @@ These figures reflect historical backtest performance under defined assumptions 
 
 ## Strategy Architecture
 
-
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                   QUANTUM_US30 ENGINE                   │
 ├──────────────────────┬──────────────────────────────────┤
@@ -107,8 +106,8 @@ These figures reflect historical backtest performance under defined assumptions 
           │                         │
           └─────────────────────────┘
                        ▼
-           
-```      ┌──────────────────────┐
+
+         ┌──────────────────────┐
          │   SHARED FILTERS     │
          │  • EMA-50 trend      │
          │  • Max spread 3.5pip │
@@ -116,7 +115,7 @@ These figures reflect historical backtest performance under defined assumptions 
          │  • No Wednesday      │
          │  • Force close 16:55 │
          └──────────────────────┘
-
+```
 
 ---
 
@@ -144,7 +143,7 @@ Performance acceleration in later years reflects percent-risk compounding rather
 ## Monte Carlo (Bootstrap Resampling · 5,000 Paths)
 
 | Scenario | Median Final | P(Profit) | Median Max DD |
-|----------|-------------|-----------|---------------|
+|----------|--------------|-----------|---------------|
 | A — Base (Historical) | $284,984 | 100% | -70.8% |
 | B — High Spread (+$50/trade) | $210,263 | 100% | -89.2% |
 | C — Enlarged SL (-$30/loss) | $226,515 | 100% | -88.7% |
@@ -158,23 +157,23 @@ Monte Carlo simulations represent alternative trade sequences and stress assumpt
 
 Open `analysis/dashboard.html` in any browser for full interactive analytics:
 
-- Equity curve  
-- Drawdown curve  
-- Monthly heatmap  
-- Annual returns  
-- Day-of-week breakdown  
-- Trade distribution  
-- Monte Carlo fan chart  
-- Stress comparison  
+- Equity curve
+- Drawdown curve
+- Monthly heatmap
+- Annual returns
+- Day-of-week breakdown
+- Trade distribution
+- Monte Carlo fan chart
+- Stress comparison
 
 ---
 
 ## Execution Assumptions & Limitations
 
-- Backtest results depend on historical data quality and execution assumptions  
-- Real-world performance may differ due to slippage, spread variation, liquidity, and latency  
-- Percent-risk sizing produces nonlinear growth as equity scales  
-- Strategy performance varies across market regimes  
-- NewsGuard filtering requires periodic updates for forward use  
+- Backtest results depend on historical data quality and execution assumptions
+- Real-world performance may differ due to slippage, spread variation, liquidity, and latency
+- Percent-risk sizing produces nonlinear growth as equity scales
+- Strategy performance varies across market regimes
+- NewsGuard filtering requires periodic updates for forward use
 
 This repository is presented strictly for research and portfolio demonstration purposes and does not constitute financial advice or an offer to manage capital.
